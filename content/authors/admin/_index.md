@@ -1,7 +1,7 @@
 ---
 title: QianLong Sang
 role: Zero Year CS Phd
-avatar_filename: people-sql.jpg
+avatar_filename: avatar.jpg
 bio: My research interests include operating system, computer architecture and
   computer security.
 interests:
