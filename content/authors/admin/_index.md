@@ -18,6 +18,8 @@ social:
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/
+    display:
+      header: false
 organizations:
   - name: WuHan University
     url: https://www.whu.edu.cn/
