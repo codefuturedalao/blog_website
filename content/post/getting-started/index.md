@@ -1,24 +1,18 @@
 ---
-title: Welcome to Wowchemy, the website builder for Hugo
-subtitle: Welcome 👋 We know that first impressions are important, so we've
-  populated your new site with some initial content to help you get familiar
-  with everything in no time.
+title: First Post, Hello Hugo
+subtitle: Hello Hugo
 date: 2020-12-13T00:00:00Z
-summary: Welcome 👋 We know that first impressions are important, so we've
-  populated your new site with some initial content to help you get familiar
-  with everything in no time.
+summary: 第一篇博客，测试字体
 draft: false
 featured: false
 authors:
   - admin
-  - 吳恩達
 lastmod: 2020-12-13T00:00:00Z
 tags:
   - Academic
   - 开源
 categories:
   - Demo
-  - 教程
 projects: []
 image:
   caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)"
@@ -26,4 +20,6 @@ image:
   placement: 2
   preview_only: false
 ---
-## ss
+# Hello Hugo
+
+第一篇博客，测试中文字体
