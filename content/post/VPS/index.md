@@ -12,7 +12,8 @@ tags:
   - Academic
   - 开源
 categories:
-  - Demo
+  - VPN
+  - Network
 projects: []
 image:
   caption: "Image credit: [**Unsplash**](./v2ray.jpg)"
