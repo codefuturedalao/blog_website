@@ -1,6 +1,28 @@
-# vim set noexpandtab doesn't work
+---
+title: Vim set noexpandtab doesn't work
+subtitle: Vim
+date: 2022-07-29T00:00:00Z
+summary: Vim 小白之路
+draft: false
+featured: false
+authors:
+  - admin
+lastmod: 2022-07-29T00:00:00Z
+tags:
+  - Academic
+  - 开源
+categories:
+  - Vim
+  - Tools
+projects: []
+image:
+  caption: "Image credit: [**Unsplash**](https://images.unsplash.com/photo-1658847133295-1693456b858c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80)"
+  focal_point: ""
+  placement: 2
+  preview_only: false
+---
 
-Recently i was writing some python code, i always encounter this error:
+Recently i was writing some python code, i always encountered this error:
 
 ![image-20220728120446489](/home/hacksang/.config/Typora/typora-user-images/image-20220728120446489.png)
 
