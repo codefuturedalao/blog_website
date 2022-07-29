@@ -30,7 +30,7 @@ And what confuses me is that i have use ```set noexpandtab``` command in ```~/.v
 
 ## Solution
 
-1. use ```:verbose set noexpandtab?``` to find the pulgin file
+1. use ```:verbose set noexpandtab?``` to find the plugin file
 
    ![image-20220728120914214](./verbose.png)
 
