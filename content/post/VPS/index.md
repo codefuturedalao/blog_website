@@ -22,8 +22,6 @@ image:
   preview_only: false
 ---
 
-# VPS 配置 v2ray + WebSocket + TLS 梯子教程
-
 ## 购买域名和VPS并添加域名解析
 
 ### 域名
