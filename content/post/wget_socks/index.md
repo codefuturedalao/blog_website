@@ -1,8 +1,8 @@
 ---
-title: wget encounter error: Unsupported scheme 'socks5'
-subtitle: VPN
+title: VPS 配置 v2ray + WebSocket + TLS 梯子教程
+subtitle: Vultr
 date: 2022-08-06T00:00:00Z
-summary: 翻墙问题集合
+summary: 个人VPN搭建
 draft: false
 featured: false
 authors:
@@ -16,7 +16,7 @@ categories:
   - Network
 projects: []
 image:
-  caption: "Image credit: [**Unsplash**](./featured.jpg)"
+  caption: "Image credit: [**Unsplash**](./v2ray.jpg)"
   focal_point: ""
   placement: 2
   preview_only: false
