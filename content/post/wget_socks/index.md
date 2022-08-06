@@ -1,5 +1,5 @@
 ---
-title: wget encounter error: Unsupported scheme socks5
+title: wget encounter error "Error parsing proxy URL socks5://127.0.0.1:1080: Unsupported scheme ‘socks5’"
 subtitle: VPN
 date: 2022-08-06T00:00:00Z
 summary: 翻墙问题集合 
