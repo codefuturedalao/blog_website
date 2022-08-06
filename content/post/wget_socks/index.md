@@ -16,7 +16,7 @@ categories:
   - Network
 projects: []
 image:
-  caption: "Image credit: [**Unsplash**]()"
+  caption: "Image credit: [**Unsplash**](./featured.jpg)"
   focal_point: ""
   placement: 2
   preview_only: false
