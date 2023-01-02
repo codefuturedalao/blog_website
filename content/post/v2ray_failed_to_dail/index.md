@@ -1,5 +1,5 @@
 ---
-title: [转载] v2ray failed to dial WebSocket 解决方法_ find an available destination
+title: 转载 v2ray failed to dial WebSocket 解决方法_ find an available destination
 subtitle: VPN
 date: 2022-11-06T00:00:00Z
 summary: 翻墙问题集合 
