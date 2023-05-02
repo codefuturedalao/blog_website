@@ -210,4 +210,6 @@ let g:ctrlsf_default_root = 'cwd'"
 
 ## 其它
 
-可以通过https://vimawesome.com/查找其他插件
+可以通过https://vimawesome.com/查找其他插件。本文主要参考[How to Turn Vim Into a Lightweight IDE](https://dane-bulat.medium.com/how-to-turn-vim-into-a-lightweight-ide-6185e0f47b79)
+
+注：尽量不要映射j[x]为打开插件的快捷键，会导致hjkl移动时响应缓慢。
