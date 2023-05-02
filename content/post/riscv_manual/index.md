@@ -6,6 +6,7 @@ summary: RISC-V Manual阅读
 draft: false
 featured: false
 type: book
+weight: 10
 authors:
   - admin
 lastmod: 2023-05-01T00:00:00Z
