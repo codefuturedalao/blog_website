@@ -5,7 +5,7 @@ date: 2023-05-01T00:00:00Z
 summary: RISC-V Manual阅读 
 draft: false
 featured: false
-type: book
+toc: true
 authors:
   - admin
 lastmod: 2023-05-01T00:00:00Z
@@ -169,4 +169,4 @@ S和B唯一的区别在于，B中的立即数左移一位（相当于乘2），i
 
   > *Signed array bounds may be checked with a single BLTU instruction, since any negative index* will compare greater than any nonnegative bound.
 
-* 
+  
