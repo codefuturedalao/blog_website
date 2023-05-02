@@ -23,6 +23,8 @@ image:
 
 # RISC-V Manual阅读 —— RV32I
 
+{{< toc >}}
+
 包含40个指令，足够实现目标compiler或者OS。
 
 ## Programmers' Model for Base Integer ISA
