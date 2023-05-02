@@ -5,6 +5,7 @@ date: 2023-05-01T00:00:00Z
 summary: RISC-V Manual阅读 
 draft: false
 featured: false
+type: book
 authors:
   - admin
 lastmod: 2023-05-01T00:00:00Z
@@ -22,8 +23,6 @@ image:
 ---
 
 # RISC-V Manual阅读 —— RV32I
-
-{{< toc >}}
 
 包含40个指令，足够实现目标compiler或者OS。
 
