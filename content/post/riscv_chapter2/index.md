@@ -5,7 +5,7 @@ date: 2023-05-01T00:00:00Z
 summary: RISC-V Manual阅读 
 draft: false
 featured: false
-toc: true
+type: book
 authors:
   - admin
 lastmod: 2023-05-01T00:00:00Z
