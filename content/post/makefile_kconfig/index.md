@@ -40,7 +40,7 @@ Linux内核Build system主要有以下四个组件：
 
 
 
-参考：
+## 参考：
 
 1. https://dl.acm.org/doi/fullHtml/10.5555/2392896.2392897
 2. https://docs.kernel.org/kbuild/makefiles.html
