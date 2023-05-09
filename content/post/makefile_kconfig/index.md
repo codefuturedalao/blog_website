@@ -38,8 +38,6 @@ Linux内核Build system主要有以下四个组件：
 3. conf程序读取.config文件加载这些宏，写入头文件中，通常是/include/generated/autoconf.h控制代码的开关
 4. Makefile进行编译
 
-
-
 ## 参考：
 
 1. https://dl.acm.org/doi/fullHtml/10.5555/2392896.2392897
