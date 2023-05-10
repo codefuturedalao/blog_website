@@ -22,8 +22,6 @@ image:
   preview_only: false
 ---
 
-# Kconfig Makefile menuconfig
-
 Linux内核Build system主要有以下四个组件：
 
 - Config symbols：一些可以用来在源文件中条件编译代码和在kernel image中是否包含module的compilation options。通常由两种符号，boolean和tristate。Boolean符号接收两种值：true或者false。Tristate 变量包含三种：yes、no或者module。并不是内核内所有的东西都可以配置成模块，因为他们非常的intrusive，比如SMP或者kernel preemption。
