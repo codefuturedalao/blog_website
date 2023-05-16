@@ -37,10 +37,4 @@ Hi! Here’s Qianlong (桑乾龙)! I am a first year Computer Science PhD studen
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
 
-
-
-My Github Contributions:
-
-
-
 <img src="http://ghchart.rshah.org/codefuturedalao" alt="codefuturedalao's Github chart" />
