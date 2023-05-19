@@ -9,12 +9,17 @@
 }
 
 @font-face {
-  font-family: 'LXGW WenKai GB Screen R';
+  font-family: wenkai;
   src: url("../fonts/LXGWWenKai-Bold.ttf"); /* IE9 */
   src: url("../fonts/LXGWWenKai-Regular.ttf");
   font-weight: 300;
   font-display: swap;
 }
 html {
-  font-family: 'LXGW WenKai GB Screen R';
+  font-family: "wenkai";
+}
+
+
+body{
+  font-family: "wenkai";
 }
