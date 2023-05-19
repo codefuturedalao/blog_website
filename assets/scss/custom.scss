@@ -11,10 +11,11 @@
 @font-face {
   font-family: wenkai;
   src: url("../fonts/LXGWWenKai-Bold.ttf"); /* IE9 */
-  src: url("../fonts/LXGWWenKai-Regular.ttf");
+  src: url("../fonts/LXGWWenKai-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/LXGWWenKai-Regular.ttf") format("truetype"), url("../fonts/LXGWWenKai-Regular.woff") format('woff'), url("../fonts/LXGWWenKai-Regular.svg#fontawesome") format("svg");
   font-weight: 300;
   font-display: swap;
 }
+
 html {
   font-family: "wenkai" !important;
 }
