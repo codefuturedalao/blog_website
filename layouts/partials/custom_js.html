@@ -1,0 +1,10 @@
+{{ if eq hugo.Environment "production" }}
+  <div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="08486765-1ffe-48d0-9421-87963eaa0971"
+  data-page-id="{{ PAGE_ID }}"
+  data-page-url="{{ PAGE_URL }}"
+  data-page-title="{{ PAGE_TITLE }}"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+{{end}}
