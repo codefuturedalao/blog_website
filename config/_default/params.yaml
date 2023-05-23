@@ -86,8 +86,6 @@ features:
       theme: preferred_color_scheme
       language_code: en
       mapping: pathname
-      loading: 'lazy'
-      input_position: 'top'
     disqus:
       shortname: ''
       show_count: true
@@ -106,8 +104,6 @@ features:
     zoom: 15
 
 # Extensions
-
-
 
 extensions:
   cms:
