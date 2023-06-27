@@ -96,7 +96,7 @@ function add(
 
 ## 嵌入式Styles
 
-可以使用<style> tag来直接覆盖目前slides的styles
+可以使用```<style>```tag来直接覆盖目前slides的styles
 
 ```
 # This is Red
