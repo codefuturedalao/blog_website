@@ -187,6 +187,10 @@ static int notifier_call_chain(struct notifier_block **nl,
 }
 ```
 
+## What's inside schedule_work?
+
+TODO
+
 ## 总结
 
 当我们通过```echo xxx > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq```时发生了如下的事情
