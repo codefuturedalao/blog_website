@@ -1,4 +1,29 @@
-# Arch Linux和Windows共享
+---
+title: Arch Linux和Windows共享
+subtitle: barrier and samba
+date: 2023-07-16T00:00:00Z
+summary: 不同平台共享
+draft: false
+featured: false
+authors:
+  - admin
+lastmod: 2023-07-16T00:00:00Z
+tags:
+  - linux 
+  - tools
+categories:
+  - linux
+  - tools
+projects: []
+image:
+  caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/vOTBmRh3-7I)"
+  focal_point: ""
+  placement: 2
+  preview_only: false
+
+
+---
+
 
 请进行以下操作前reboot电脑，否则容易遇到虽然使用sudo pacman -Syyu滚动升级但某些包不存在的错误。
 
