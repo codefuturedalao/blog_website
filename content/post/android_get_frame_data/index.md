@@ -41,7 +41,7 @@ image:
 
 3. 利用 FrameInfo 进行监控
 
-   ```
+   ```shell
    使用 ：adb shell dumpsys gfxinfo [package name] framestats
    示例 ：adb shell dumpsys gfxinfo com.meizu.flyme.launcher framestats
    ```
