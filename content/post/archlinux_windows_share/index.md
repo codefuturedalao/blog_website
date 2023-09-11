@@ -35,6 +35,10 @@ image:
 
 ![image-20230716110020276](img/image-20230716110020276.png)
 
+### barrier突然不工作
+
+可能是因为键盘上的scroll lock键开启，导致无法工作。
+
 ## 文件共享
 
 其中Windows作为客户端，Arch linux作为服务端。
