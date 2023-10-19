@@ -136,7 +136,7 @@ cd ${WORK_DIR}/kernel
 
 找到Image.lz4-dtb文件的位置
 
-通常在${WORK_DIR}/out目录下```find ./ -name 'Imge.lz4-dtb'```即可找到
+通常在${WORK_DIR}/out目录下```find ./ -name 'Image.lz4-dtb'```即可找到
 
 如./android-msm-pixel-4.9/private/msm-google/arch/arm64/boot/Image.lz4-dtb
 
