@@ -1,7 +1,7 @@
 ---
 title: 芯片授权基础知识
 subtitle: 一些Arm架构的基础知识
-date: 2023-05-12T00:00:00Z
+date: 2023-11-29T00:00:00Z
 summary: 手机Arm芯片简介
 draft: false
 featured: false
