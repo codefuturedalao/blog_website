@@ -33,7 +33,7 @@ superuser: true
 highlight_name: true
 ---
 
-Hi! Here’s Qianlong (桑乾龙)! I am a first year Computer Science PhD student at WuHan University, advised Prof. [Dazhao Cheng](https://scholar.google.com/citations?hl=en&user=rRsraIwAAAAJ&view_op=list_works&sortby=pubdate#). I have a broad interest in system research, and my current work focuses on energy-aware scheduling in operating systems.
+Hi! Here’s Qianlong (桑乾龙)! I am a second year Computer Science PhD student at WuHan University, advised Prof. [Dazhao Cheng](https://scholar.google.com/citations?hl=en&user=rRsraIwAAAAJ&view_op=list_works&sortby=pubdate#). I have a broad interest in system research, and my current work focuses on energy-aware scheduling in operating systems.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
 
