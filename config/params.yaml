@@ -1,6 +1,6 @@
 # SITE SETUP
-# Guide: https://wowchemy.com/docs/getting-started/
-# Documentation: https://wowchemy.com/docs/
+# Guide: https://docs.hugoblox.com/tutorial/
+# Documentation: https://docs.hugoblox.com/
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
@@ -8,7 +8,7 @@
 appearance:
   theme_day: minimal
   theme_night: minimal
-  font: wenkai
+  font: minimal
   font_size: L
 
 # SEO
@@ -18,11 +18,13 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Wowchemy website builder.'
-    twitter: 'wowchemy'
+    description: 'A highly-customizable Hugo academic resume theme powered by Hugo Blox Builder.'
+    twitter: 'GetResearchDev'
   analytics:
-    google_analytics: 'G-HRL4KVRG02'
+    google_analytics: ''
     baidu_tongji: ''
+    google_tag_manager: ''
+    microsoft_clarity: ''
   verification:
     google: ''
     baidu: ''
@@ -38,6 +40,8 @@ header:
     show_day_night: true
     show_search: true
     highlight_active_link: true
+
+# Site footer
 
 footer:
   copyright:
@@ -59,38 +63,31 @@ locale:
 
 features:
   syntax_highlighter:
-    enable: true
-    extra_languages:
-      - r
-      - latex
+    theme_light: github-light
+    theme_dark: dracula
   math:
-    enable: false
-  diagram:
     enable: false
   privacy_pack:
     enable: false
   repository:
     url: 'https://github.com/<username>/<repository>'
     content_dir: content
-    branch: master
+    branch: main
   avatar:
     gravatar: false
     shape: circle
   comment:
-    provider: giscus
-    giscus:
-      repo: 'codefuturedalao/blog_website'
-      repo_id: 'R_kgDOHH6e8Q'
-      category: 'Show and tell'
-      category_id: 'DIC_kwDOHH6e8c4CWq6a'
-      theme: preferred_color_scheme
-      language_code: en
-      mapping: pathname
+    provider: ''
     disqus:
       shortname: ''
       show_count: true
     commento:
       url: ''
+    giscus:
+      repo: ''
+      repo_id: ''
+      category: ''
+      category_id: ''
   search:
     provider: wowchemy
     algolia:
@@ -99,7 +96,7 @@ features:
       index_name: ''
       show_logo: false
   map:
-    provider: ''
+    provider: 'mapnik'
     api_key: ''
     zoom: 15
 
@@ -107,10 +104,13 @@ features:
 
 extensions:
   cms:
-    branch: master
+    branch: main
     local_backend: false
-  isotope:
-    # Enable if you use the Portfolio widget or Publication filter
-    enable: true
   academicons:
     enable: true
+
+# Security
+
+security:
+  # Allow frame for embedding speaker notes in slides
+  allow_frame: true
