@@ -1,6 +1,6 @@
 ---
 title: QianLong Sang
-role: First Year CS Phd
+role: Second Year CS Phd
 avatar_filename: avatar.jpg
 bio: My research interests include operating system, computer architecture and
   computer security.
