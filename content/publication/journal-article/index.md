@@ -39,7 +39,7 @@ featured: true
 # links:
 # - name: ""
 #   url: ""
-url_pdf: './Orthrus.pdf'
+url_pdf: ./Orthrus.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
