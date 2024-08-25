@@ -1,16 +1,15 @@
 ---
-title: "An example journal article"
+title: "QoS-Aware Power Management via Scheduling and Governing Co-Optimization on Mobile Devices"
 authors:
 - admin
-- Robert Ford
-author_notes:
-- "Equal contribution"
-- "Equal contribution"
-date: "2015-09-01T00:00:00Z"
+- Jinqi Yan
+- Rui Xie
+- Chuang Hu
+- Kun Suo
+- Dazhao Cheng,
+date: "2024-08-25T00:00:00Z"
 doi: ""
 
-# Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -18,23 +17,25 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Source Themes, 1*(1)"
+publication: "*IEEE Transactions on Mobile Computing"
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Scheduling and governing are two key technologies to trade off the Quality of Service (QoS) against the power consumption on mobile devices with heterogeneous cores. However, there are still defects in the use of them, among which two of the decoupling
+issues are critical and need to be resolved. First, both the scheduling and governing decouple from QoS, one of the most important metrics of user experience on mobile platforms. Second, scheduling and governing also decouple from each other in mobile systems
+and they might weaken each other when being effective at the same time. To address the above issues, we propose Orthrus, a comprehensive QoS-aware power management approach that involves a governing approach based on deep reinforcement learning to adjust the frequency of heterogeneous cores, a scheduling algorithm based on finite state machine that assigns cores to QoSrelated threads, and expert fuzzy control-based coordination mechanism between the two to manage the impact between scheduling and governing. Our proposed approach aims to minimize power consumption while guaranteeing the QoS. We implement Orthrus on Google Pixel 3 as the system service of Android and evaluate it using several widespread mobile applications. The performance evaluation demonstrates that Orthrus reduces the average power consumption by up to 35.7% compared to three state-of-the-art techniques while ensuring the QoS on mobile platforms.
 
 # Summary. An optional shortened abstract.
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
 - Source Themes
-featured: false
+featured: true
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
+url_pdf: './Orthrus.pdf'
+url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
