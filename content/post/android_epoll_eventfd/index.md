@@ -1,4 +1,32 @@
-# Epoll和EventFd分析
+---
+title: Android中Epoll和EventFd分析
+subtitle: 
+date: 2024-08-25T00:00:00Z
+summary: android debug
+draft: false
+featured: false
+authors:
+  - admin
+lastmod: 2023-10-19T00:00:00Z
+tags:
+  - android 
+  - MessageQueue
+  - Linux
+  - Epoll
+  - EventFd
+categories:
+  - android 
+  - MessageQueue
+  - Linux
+  - Epoll
+  - EventFd
+projects: [RenderT]
+image:
+  caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/vOTBmRh3-7I)"
+  focal_point: ""
+  placement: 2
+  preview_only: false
+---
 
 Android中的MessageQueue、Handler和Looper机制底层通过epoll和eventfd实现唤醒和等待，本篇文章致力于从上层对两者的使用以及底层的视角来进行分析。
 

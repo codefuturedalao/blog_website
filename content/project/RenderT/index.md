@@ -3,10 +3,10 @@ slides: example
 url_pdf: ""
 summary: ""
 url_video: ""
-date: 2022-04-27T00:00:00Z
+date: 2024-08-27T00:00:00Z
 external_link: ""
 url_slides: ""
-title: Energy Aware Scheduling in Mobile Devices
+title: Identifying Critical Threads in Mobile Devices
 tags:
   - Operating System
 links: []
