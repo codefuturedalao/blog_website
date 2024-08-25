@@ -1,5 +1,5 @@
 ---
-title: "QoS-Aware Power Management via Scheduling and Governing Co-Optimization on Mobile Devices"
+title: "QoS Aware Power Management via Scheduling and Governing Co Optimization on Mobile Devices"
 authors:
 - admin
 - Jinqi Yan
@@ -39,7 +39,7 @@ featured: true
 # links:
 # - name: ""
 #   url: ""
-url_pdf: 
+url_pdf: ''
 url_code: ''
 url_dataset: ''
 url_poster: ''
