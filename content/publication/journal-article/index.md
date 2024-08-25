@@ -6,7 +6,7 @@ authors:
 - Rui Xie
 - Chuang Hu
 - Kun Suo
-- Dazhao Cheng,
+- Dazhao Cheng
 date: "2024-08-25T00:00:00Z"
 doi: ""
 
@@ -17,8 +17,8 @@ doi: ""
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*IEEE Transactions on Mobile Computing"
-publication_short: "IEEE TMC"
+publication: In *IEEE Transactions on Mobile Computing*
+publication_short: In *IEEE TMC*
 
 abstract: Scheduling and governing are two key technologies to trade off the Quality of Service (QoS) against the power consumption on mobile devices with heterogeneous cores. However, there are still defects in the use of them, among which two of the decoupling
 issues are critical and need to be resolved. First, both the scheduling and governing decouple from QoS, one of the most important metrics of user experience on mobile platforms. Second, scheduling and governing also decouple from each other in mobile systems
@@ -39,7 +39,7 @@ featured: true
 # links:
 # - name: ""
 #   url: ""
-url_pdf: ./Orthrus.pdf
+url_pdf: 
 url_code: ''
 url_dataset: ''
 url_poster: ''
