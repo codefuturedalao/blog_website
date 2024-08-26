@@ -79,7 +79,7 @@ features:
   comment:
     provider: 'disqus'
     disqus:
-      shortname: ''
+      shortname: 'sangqianlong'
       show_count: true
     commento:
       url: ''
