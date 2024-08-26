@@ -19,8 +19,9 @@
                 {{ .Content }}
               </div>
               {{ partial "page_footer" . }}
+			  {{ partial "disqus.html" . }}
             </div>
-			{{ partial "disqus.html" . }}
+			
         </article>
   {{ if .Params.toc }}
       </main>
