@@ -1,4 +1,5 @@
 {{- define "main" -}}
+{{ partial "disqus.html" . }}
 {{ if .Params.toc }}
 <div class="container-fluid docs">
     <div class="row flex-xl-nowrap">
@@ -26,4 +27,3 @@
   </div>
   {{ end }}
 {{- end -}}
-{{ partial "disqus.html" . }}
