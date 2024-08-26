@@ -20,11 +20,12 @@
               </div>
               {{ partial "page_footer" . }}
             </div>
+			{{ partial "disqus.html" . }}
         </article>
   {{ if .Params.toc }}
       </main>
     </div>
   </div>
   {{ end }}
-{{ partial "disqus.html" . }}
+
 {{- end -}}
