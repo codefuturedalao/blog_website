@@ -5,11 +5,11 @@ date: 2024-08-25T00:00:00Z
 summary: android debug
 draft: false
 featured: false
-disqus_identifier: sangqianlong
+disqus_identifier: https-codefuturesql-top-1 
 toc: true
 authors:
   - admin
-lastmod: 2023-10-19T00:00:00Z
+lastmod: 2024-08-25T00:00:00Z
 tags:
   - android 
   - MessageQueue
