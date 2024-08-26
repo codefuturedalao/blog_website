@@ -5,6 +5,7 @@ date: 2024-08-25T00:00:00Z
 summary: android debug
 draft: false
 featured: false
+toc: true
 authors:
   - admin
 lastmod: 2023-10-19T00:00:00Z
