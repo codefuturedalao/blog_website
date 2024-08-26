@@ -26,11 +26,11 @@ body{
   font-family: "wenkai" !important;
 }
 
-pre,code {
+.chroma {
   font-family: "wenkai";
   background-color: #F5F5F5 !important;
 }
 
-.dark pre code {
+.dark .chroma{
     background: #20232B !important;
 }
