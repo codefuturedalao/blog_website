@@ -1311,18 +1311,6 @@ Android中最常见的线程间通信机制MessageQueue底层采用epoll和event
 
 
 
-{{< two-columns >}}
-
-```cpp
-int test();
-```
-
-###
-
-Hello test
-
-{{< /two-columns >}}
-
 ## 参考
 
 1. [Android 重学系列 Handler与相关系统调用的剖析(上)](https://www.jianshu.com/p/416de2a3a1d6)
