@@ -1309,6 +1309,20 @@ out_unlock:
 
 Android中最常见的线程间通信机制MessageQueue底层采用epoll和eventfd进行等待和唤醒，eventfd内核中维护着一个64位无符号整数和一个等待队列（很多fd都维护了等待队列，例如timerfd、socketfd等）当write和read该fd时会唤醒或者加入到该等待队列中。epoll可以用来监视多个fd的事件，因此内核中维护了多个链表结构，包括就绪文件队列，等待队列等。当进行epoll_ctl将监视的目标fd加入进来时，会创建epitem加入红黑树，以及entry加入到目标fd的等待队列中。epoll_wait会先查看就绪文件链表是否存在内容，存在则直接返回，否则需要等待，将调用者加入到ep的等待队列中。当目标fd存在事件时会去唤醒其等待队列上的所有entry，包括epoll entry，而epoll entry的唤醒函数不是```default_wake_function```而是```ep_poll_callback```，该函数处理ep中的就绪队列和唤醒ep上等待队列的线程。
 
+
+
+{{< two-colums >}}
+
+```cpp
+int test();
+```
+
+###
+
+Hello test
+
+{{< /two-colums >}}
+
 ## 参考
 
 1. [Android 重学系列 Handler与相关系统调用的剖析(上)](https://www.jianshu.com/p/416de2a3a1d6)
