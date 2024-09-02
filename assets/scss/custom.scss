@@ -34,3 +34,25 @@ body{
 .dark .chroma{
     background: #20232B !important;
 }
+
+.two-columns-container {
+  display: flex;
+  gap: 10px; /* 调整列之间的间距 */
+  margin: 20px 0; /* 添加上下外边距以与其他内容区分 */
+}
+
+.column {
+  flex: 1; /* 每列占据相等的空间 */
+  padding: 10px; /* 内边距 */
+  background-color: transparent; /* 透明背景 */
+  border: 1px solid rgba(255, 255, 255, 0.6); /* 半透明边框 */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 添加适配小屏幕的响应式设计 */
+@media (max-width: 768px) {
+  .two-columns-container {
+    flex-direction: column;
+  }
+}
