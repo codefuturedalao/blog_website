@@ -1311,7 +1311,7 @@ Android中最常见的线程间通信机制MessageQueue底层采用epoll和event
 
 
 
-{{< two-colums >}}
+{{< two-columns >}}
 
 ```cpp
 int test();
@@ -1321,7 +1321,7 @@ int test();
 
 Hello test
 
-{{< /two-colums >}}
+{{< /two-columns >}}
 
 ## 参考
 
