@@ -94,7 +94,7 @@ image:
 示例：
 
 ```
-{{< two-columns >}}
+{{</* two-columns */>}}
 
 ​```cpp
 status_t SurfaceFlinger::createEffectLayer(const LayerCreationArgs& args, sp<IBinder>* handle,
@@ -105,11 +105,11 @@ status_t SurfaceFlinger::createEffectLayer(const LayerCreationArgs& args, sp<IBi
 }
 ​```
 
-###
+<--->
 
 Hello test
 
-{{< /two-columns >}}
+{{</* /two-columns */>}}
 ```
 
 效果如下：
@@ -125,7 +125,7 @@ status_t SurfaceFlinger::createEffectLayer(const LayerCreationArgs& args, sp<IBi
 }
 ```
 
-###
+<--->
 
 Hello test
 
@@ -134,3 +134,4 @@ Hello test
 ## 参考
 
 [1] [Shortcodes](https://gohugo.io/content-management/shortcodes/#figure)
+[2] [Hugo Book - Columns](https://hugo-book-demo.netlify.app/docs/shortcodes/columns/)

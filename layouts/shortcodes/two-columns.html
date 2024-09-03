@@ -1,20 +1,7 @@
-<div class="two-columns-container">
-  <div class="column column-left">
-    {{ with .Inner }} 
-    {{ $parts := split . "###" }} 
-    {{ if ge (len $parts) 1 }}
-      {{ $left := index $parts 0 }} 
-      {{ $left | $.Page.RenderString }} 
-    {{ end }} 
-    {{ end }}
+<div class="book-columns flex flex-wrap">
+{{ range split .Inner "<--->" }}
+  <div class="flex-even markdown-inner">
+    {{ . | $.Page.RenderString }}
   </div>
-  <div class="column column-right">
-    {{ with .Inner }} 
-    {{ $parts := split . "###" }} 
-    {{ if ge (len $parts) 2 }}
-      {{ $right := index $parts 1 }} 
-      {{ $right | $.Page.RenderString }} 
-    {{ end }}
-    {{ end }}
-  </div>
+{{ end }}
 </div>

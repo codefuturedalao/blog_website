@@ -35,24 +35,33 @@ body{
     background: #20232B !important;
 }
 
-.two-columns-container {
-  display: flex;
-  gap: 10px; /* 调整列之间的间距 */
-  margin: 20px 0; /* 添加上下外边距以与其他内容区分 */
+$padding-16: 1rem !default;
+$body-min-width: 20rem !default;
+
+$hint-colors: (
+  info: #6bf,
+  warning: #fd6,
+  danger: #f66,
+) !default
+
+// {{< columns >}}
+.book-columns {
+margin-left: -$padding-16;
+margin-right: -$padding-16;
+
+> div {
+  margin: $padding-16 0;
+  min-width: $body-min-width / 2;
+  padding: 0 $padding-16;
+}
 }
 
-.column {
-  flex: 1; /* 每列占据相等的空间 */
-  padding: 10px; /* 内边距 */
-  background-color: transparent; /* 透明背景 */
-  border: 1px solid rgba(255, 255, 255, 0.6); /* 半透明边框 */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* 添加适配小屏幕的响应式设计 */
-@media (max-width: 768px) {
-  .two-columns-container {
-    flex-direction: column;
+// {{< hint >}}
+.book-hint {
+@each $name, $color in $hint-colors {
+  &.#{$name} {
+	border-color: $color;
+	background-color: rgba($color, 0.1);
   }
+}
 }
