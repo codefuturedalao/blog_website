@@ -30,11 +30,11 @@ image:
 
 类似于通过提前编写一些组件，然后就可以在Markdown中快捷地使用这些命令了。shortcodes不同于Partial template（Hugo的另一个功能，我博客的评论系统和toc都是根据此搞得），并不会直接生效，而是需要我们显示的调用，如`{{%/* shortcodename arguments */%}}`或`{{</* shortcodename arguments */>}}`，
 
-{{< highlight go-html-template >}}
+{{< hint info >}}
 
 这两者还是略有区别的，但在我们这个例子没什么区别。
 
-{{</ highlight >}}
+{{< /hint >}}
 
 ## 实现two-columns
 
