@@ -73,7 +73,6 @@ image:
    }
    
    
-   // {{< columns >}}
    .book-columns {
    margin-left: -$padding-16;
    margin-right: -$padding-16;
