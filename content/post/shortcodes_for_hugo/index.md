@@ -31,61 +31,58 @@ image:
 类似于通过提前编写一些组件，然后就可以在Markdown中快捷地使用这些命令了。shortcodes不同于Partial template（Hugo的另一个功能，我博客的评论系统和toc都是根据此搞得），并不会直接生效，而是需要我们显示的调用，如`{{%/* shortcodename arguments */%}}`或`{{</* shortcodename arguments */>}}`，
 
 {{< hint info >}}
-
+**Note**
 这两者还是略有区别的，但在我们这个例子没什么区别。
 
 {{< /hint >}}
 
 ## 实现two-columns
 
-1. 将HTML的template放到`layouts/shortcodes`目录下，文件名字为我们后面使用的shortcodename。template如下，我命名为`two-colums.html`。
+1. 将HTML的template放到`layouts/shortcodes`目录下，文件名字为我们后面使用的shortcodename。template如下，我命名为`two-columns.html`。
 
    ```html
-   <div class="two-columns-container">
-     <div class="column column-left">
-       {{ with .Inner }} 
-       {{ $parts := split . "###" }} 
-       {{ if ge (len $parts) 1 }}
-         {{ $left := index $parts 0 }} 
-         {{ $left | $.Page.RenderString }} 
-       {{ end }} 
-       {{ end }}
+   <div class="book-columns flex flex-wrap">
+   {{ range split .Inner "<--->" }}
+     <div class="flex-even markdown-inner">
+       {{ . | $.Page.RenderString }}
      </div>
-     <div class="column column-right">
-       {{ with .Inner }} 
-       {{ $parts := split . "###" }} 
-       {{ if ge (len $parts) 2 }}
-         {{ $right := index $parts 1 }} 
-         {{ $right | $.Page.RenderString }} 
-       {{ end }}
-       {{ end }}
-     </div>
+   {{ end }}
    </div>
    ```
-
-2. 如果存在scss文件，需要放在```assets\scss```中，我是直接放在了custon.scss文件中。scss文件内容如下
+   
+2. 如果存在scss文件，需要放在```assets\scss```中，我是直接放在了custom.scss文件中。scss文件内容如下
 
    ```scss
-   .two-columns-container {
+   $padding-16: 1rem !default;
+   $body-min-width: 20rem !default;
+   
+   .flex {
      display: flex;
-     gap: 10px; /* 调整列之间的间距 */
-     margin: 20px 0; /* 添加上下外边距以与其他内容区分 */
    }
    
-   .column {
-     flex: 1; /* 每列占据相等的空间 */
-     padding: 10px; /* 内边距 */
-     background-color: transparent; /* 透明背景 */
-     border: 1px solid rgba(255, 255, 255, 0.6); /* 半透明边框 */
-     border-radius: 8px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   .flex-auto {
+     flex: 1 1 auto;
    }
    
-   /* 添加适配小屏幕的响应式设计 */
-   @media (max-width: 768px) {
-     .two-columns-container {
-       flex-direction: column;
-     }
+   .flex-even {
+     flex: 1 1;
+   }
+   
+   .flex-wrap {
+     flex-wrap: wrap;
+   }
+   
+   
+   // {{< columns >}}
+   .book-columns {
+   margin-left: -$padding-16;
+   margin-right: -$padding-16;
+   
+   	> div {
+   	  margin: $padding-16 0;
+   	  min-width: $body-min-width / 2;
+   	  padding: 0 $padding-16;
+   	}
    }
    ```
 
@@ -96,7 +93,7 @@ image:
 ```
 {{</* two-columns */>}}
 
-​```cpp
+​```c++
 status_t SurfaceFlinger::createEffectLayer(const LayerCreationArgs& args, sp<IBinder>* handle,
                                            sp<Layer>* outLayer) {
     *outLayer = getFactory().createEffectLayer(args);
@@ -116,7 +113,7 @@ Hello test
 
 {{< two-columns >}}
 
-```cpp
+```c++
 status_t SurfaceFlinger::createEffectLayer(const LayerCreationArgs& args, sp<IBinder>* handle,
                                            sp<Layer>* outLayer) {
     *outLayer = getFactory().createEffectLayer(args);
@@ -131,7 +128,9 @@ Hello test
 
 {{< /two-columns >}}
 
+
 ## 参考
 
 [1] [Shortcodes](https://gohugo.io/content-management/shortcodes/#figure)
+
 [2] [Hugo Book - Columns](https://hugo-book-demo.netlify.app/docs/shortcodes/columns/)
