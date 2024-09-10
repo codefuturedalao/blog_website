@@ -151,17 +151,53 @@ int main(int, char**) {
 
 1. `setThreadPoolMaxThreadCount`函数设置线程池最大的数量为4。
 
-   ```c++
-   status_t ProcessState::setThreadPoolMaxThreadCount(size_t maxThreads) {
-   	...
-       if (ioctl(mDriverFD, BINDER_SET_MAX_THREADS, &maxThreads) != -1) {
-           mMaxThreads = maxThreads;
-       }
-       ...
-   }
-   ```
+   1. 首先调用`ProcessState::self()`函数。
 
-   
+      ```c++
+      // frameworks/native/libs/binder/ProcessState.cpp
+      #ifdef __ANDROID_VNDK__
+      const char* kDefaultDriver = "/dev/vndbinder";
+      #else
+      const char* kDefaultDriver = "/dev/binder";
+      #endif
+      
+      sp<ProcessState> ProcessState::self()
+      {
+          return init(kDefaultDriver, false /*requireDefault*/);
+      }
+      
+      sp<ProcessState> ProcessState::init(const char* driver, bool requireDefault) {
+          ...
+          [[clang::no_destroy]] static std::once_flag gProcessOnce;
+          std::call_once(gProcessOnce, [&](){
+              if (access(driver, R_OK) == -1) {
+                  driver = "/dev/binder";
+              }
+      
+              int ret = pthread_atfork(ProcessState::onFork, ProcessState::parentPostFork,  ProcessState::childPostFork);
+              std::lock_guard<std::mutex> l(gProcessMutex);
+              gProcess = sp<ProcessState>::make(driver);
+          });
+      	...
+          verifyNotForked(gProcess->mForked);
+          return gProcess;
+      }
+      ```
+
+      `self()`函数调用了`ProcessState::init()`函数，在`init`函数中初始化了全局变量`gProcess`，该变量是类`ProcessState`的对象指针，其初始化函数中完成了对Binder文件的初始化。参见TODO。
+
+   2. 然后调用`setThreadPoolMaxThreadCount`函数
+
+      ```c++
+      status_t ProcessState::setThreadPoolMaxThreadCount(size_t maxThreads) {
+      	...
+          if (ioctl(mDriverFD, BINDER_SET_MAX_THREADS, &maxThreads) != -1) {
+              mMaxThreads = maxThreads;
+          }
+      }
+      ```
+
+      通过`ioctl`函数向mDriverFD写入设置`BINDER_SET_MAX_THREADS`来设置binder最大线程的数量。
 
 2. 
 
