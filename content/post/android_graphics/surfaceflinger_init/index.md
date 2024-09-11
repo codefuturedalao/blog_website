@@ -22,6 +22,8 @@ image:
   preview_only: false
 ---
 
+# SurfaceFlinger启动
+
 SurfaceFlinger代码目录在`frameworks/native/services/surfaceflinger/`。
 
 {{< two-columns >}}
@@ -46,7 +48,7 @@ TODO
 
 {{< /two-columns >}}
 
-## 
+## Main函数入口
 
 SF启动首先调用`main_surfaceflinger.cpp`的`main`函数
 
@@ -230,7 +232,9 @@ int main(int, char**) {
    }
    ```
 
-   该函数中初始化了大量的成员变量，我们节选了几个可能比较重要的变量如`maxFrameBufferAcquiredBuffers`，`minAcquiredBuffers`，`maxGraphicsWidth`和`maxGraphicsHeight`等
+   该函数中初始化了大量的成员变量，我们节选了几个可能比较重要的变量如`maxFrameBufferAcquiredBuffers`，`minAcquiredBuffers`，`maxGraphicsWidth`和`maxGraphicsHeight`等。
+
+{{< /two-columns >}}
 
 5. 调用函数`setpriority`设置当前进程（第二个参数为0标识调用者进程）的prio为-8（越小越容易得到调度）。
 
@@ -277,37 +281,23 @@ int main(int, char**) {
 
    接下来还根据`set_sched_policy`函数设置了线程的profile，大概就是对cpu、io的cgroup和timerslack等参数进行覆写，我们暂时按下不表。
 
-6. 调用`flinger->init`函数进行初始化。
+6. 调用`flinger->init`函数进行初始化。代码篇幅太长，我们放到下面进行讲解。
 
-7. 
+## flinger->init初始化surfaceflinger
 
-{{< /two-columns >}}
-
-
-
-{{< two-colums >}}
+{{< two-columns >}}
 
 ```c++
 void SurfaceFlinger::init() FTL_FAKE_GUARD(kMainThreadContext) {
     ATRACE_CALL();
-    ALOGI(  "SurfaceFlinger's main thread ready to run. "
-            "Initializing graphics H/W...");
-    addTransactionReadyFilters();
-    Mutex::Autolock lock(mStateLock);
 
     // Get a RenderEngine for the given display / config (can't fail)
     // TODO(b/77156734): We need to stop casting and use HAL types when possible.
     // Sending maxFrameBufferAcquiredBuffers as the cache size is tightly tuned to single-display.
     auto builder = renderengine::RenderEngineCreationArgs::Builder()
-                           .setPixelFormat(static_cast<int32_t>(defaultCompositionPixelFormat))
-                           .setImageCacheSize(maxFrameBufferAcquiredBuffers)
-                           .setEnableProtectedContext(enable_protected_contents(false))
-                           .setPrecacheToneMapperShaderOnly(false)
-                           .setBlurAlgorithm(chooseBlurAlgorithm(mSupportsBlur))
-                           .setContextPriority(
-                                   useContextPriority
-                                           ? renderengine::RenderEngine::ContextPriority::REALTIME
-                                           : renderengine::RenderEngine::ContextPriority::MEDIUM);
+                      .setPixelFormat(static_cast<int32_t>(defaultCompositionPixelFormat))
+                      .setImageCacheSize(maxFrameBufferAcquiredBuffers)
+        			  ...
     chooseRenderEngineType(builder);
     mRenderEngine = renderengine::RenderEngine::create(builder.build());
     mCompositionEngine->setRenderEngine(mRenderEngine.get());
@@ -460,3 +450,8 @@ void SurfaceFlinger::init() FTL_FAKE_GUARD(kMainThreadContext) {
 
 
 {{< /two-columns >}}
+
+
+
+## flinger->run开始运行
+
