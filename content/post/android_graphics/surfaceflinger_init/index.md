@@ -310,7 +310,6 @@ void SurfaceFlinger::init() FTL_FAKE_GUARD(kMainThreadContext) {
     }
 
     mCompositionEngine->setTimeStats(mTimeStats);
-
     mCompositionEngine->setHwComposer(getFactory().createHWComposer(mHwcServiceName));
     auto& composer = mCompositionEngine->getHwComposer();
     composer.setCallback(*this);
