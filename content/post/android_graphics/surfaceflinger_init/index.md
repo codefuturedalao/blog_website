@@ -285,7 +285,7 @@ int main(int, char**) {
 
 
 
-{{< two-colums >}}
+{{< two-columns >}}
 
 ```c++
 void SurfaceFlinger::init() FTL_FAKE_GUARD(kMainThreadContext) {
