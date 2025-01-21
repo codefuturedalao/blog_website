@@ -1,7 +1,7 @@
 ---
 title: List of Rejections
 subtitle: never give up
-date: 2024-11-10T00:00:00Z
+date: 2025-01-20T00:00:00Z
 summary: failure in sci
 draft: false
 featured: false
@@ -24,8 +24,12 @@ image:
 
 ---
 
-Inspired by the blog [List of Rejections](https://zhyfeng.github.io/posts/blog-post-1/), i wanna sumup the rejection i received by now (2024/11/10). Its a positve attitude to face the failure, so never give up!
+Inspired by the blog [List of Rejections](https://zhyfeng.github.io/posts/blog-post-1/), i wanna sum up the rejection i received by now (2025/01/20). Its a positive attitude to face the failure, so never give up!
 
 * [IWQoS 2023] Reject |  4. Accept \ 2. Weak reject \  2. Weak reject \ 3. Weak accept |
 	
 	62 and 11 papers were accepted as regular papers and short papers, respectively, out of 264 submissions.
+	
+* [WWW 2025] Reject |  Technical Quality: 4 \ Technical Quality: 4 \ Technical Quality: 3 \ Technical Quality: 3 \ Technical Quality: 5
+
+  Received 2062 valid submissions, of which 409 were accepted to the conference.
