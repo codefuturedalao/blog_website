@@ -33,3 +33,9 @@ Inspired by the blog [List of Rejections](https://zhyfeng.github.io/posts/blog-p
 * [WWW 2025] Reject |  Technical Quality: 4 \ Technical Quality: 4 \ Technical Quality: 3 \ Technical Quality: 3 \ Technical Quality: 5
 
   Received 2062 valid submissions, of which 409 were accepted to the conference.
+
+* [Mobicom 2025] Reject | 3 3 2 3 3
+
+  Out of 348 submissions in the winter session, 36 papers were accepted.
+
+  ![image-20250716084255106](img/image-20250716084255106.png)
