@@ -39,3 +39,7 @@ Inspired by the blog [List of Rejections](https://zhyfeng.github.io/posts/blog-p
   Out of 348 submissions in the winter session, 36 papers were accepted.
 
   ![image-20250716084255106](img/image-20250716084255106.png)
+
+* [ASPLOS 2026 Summer Cycle] Reject | 3 3 3
+
+  89 papers were accepted out of 840 submissions, and 42 were invited for revision.
