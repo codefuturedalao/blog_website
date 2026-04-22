@@ -19,7 +19,7 @@ $hint-colors: (
 }
 
 @font-face {
-  font-family: wenkai;
+  font-family: wenkai,;
   src: url("https://codefuturesql.top/uploads/LXGWWenKai-Bold.ttf"); /* IE9 */
   src: url("https://codefuturesql.top/uploads/LXGWWenKai-Regular.eot?#iefix") format("embedded-opentype"), url("https://codefuturesql.top/uploads/LXGWWenKai-Regular.ttf") format("truetype"), url("https://codefuturesql.top/uploads/LXGWWenKai-Regular.woff") format('woff'), url("https://codefuturesql.top/uploads/LXGWWenKai-Regular.svg#fontawesome") format("svg");
   font-weight: 300;
@@ -27,17 +27,17 @@ $hint-colors: (
 }
 
 html {
-  font-family: "wenkai" !important;
+  font-family: "wenkai," !important;
   scroll-behavior: smooth;
 }
 
 
 body{
-  font-family: "wenkai" !important;
+  font-family: "wenkai," !important;
 }
 
 .chroma {
-  font-family: "wenkai";
+  font-family: "wenkai,";
   background-color: #F5F5F5 !important;
 }
 
