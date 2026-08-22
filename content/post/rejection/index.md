@@ -43,3 +43,7 @@ Inspired by the blog [List of Rejections](https://zhyfeng.github.io/posts/blog-p
 * [ASPLOS 2026 Summer Cycle] Reject | 3 3 3
 
   89 papers were accepted out of 840 submissions, and 42 were invited for revision.
+
+* [SOSP 2026] Reject
+
+  Scores — Overall Merit: 2 / 3 / 3 / 2 / 2; Reviewer Expertise: 1 / 1 / 2 / 2 / 1; Novelty: 2 / 3 / 2 / 2 / 2; Presentation Quality: 3 / 3 / 3 / 2 / 1.
