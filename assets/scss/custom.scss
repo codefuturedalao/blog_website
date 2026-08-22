@@ -1,8 +1,10 @@
 @import url("/fonts/lxgw-screen/lxgwwenkaiscreen.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css");
 
 $padding-16: 1rem !default;
 $body-min-width: 20rem !default;
 $lxgw-screen-font: "LXGW WenKai Screen", "Klee One", cursive;
+$home-font: "Lato", "Helvetica Neue", Arial, sans-serif;
 
 $hint-colors: (
   info: #6bf,
@@ -59,6 +61,38 @@ kbd,
 samp,
 .chroma {
   font-family: $lxgw-screen-font !important;
+}
+
+body.home-lato,
+body.home-lato h1,
+body.home-lato h2,
+body.home-lato h3,
+body.home-lato h4,
+body.home-lato h5,
+body.home-lato h6,
+body.home-lato p,
+body.home-lato li,
+body.home-lato a,
+body.home-lato button,
+body.home-lato input,
+body.home-lato textarea,
+body.home-lato select,
+body.home-lato code,
+body.home-lato pre,
+body.home-lato kbd,
+body.home-lato samp,
+body.home-lato .navbar,
+body.home-lato .article-style,
+body.home-lato .card,
+body.home-lato .btn,
+body.home-lato .form-control,
+body.home-lato .dropdown-menu,
+body.home-lato .section-subheading,
+body.home-lato .text-monospace,
+body.home-lato .sidebar-search-shortcut,
+body.home-lato .page-footer,
+body.home-lato .chroma {
+  font-family: $home-font !important;
 }
 
 .chroma {
@@ -417,10 +451,8 @@ body {
 #publications .author-highlighted {
   color: #111827;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.025em;
-  -webkit-text-stroke: 0.2px currentColor;
-  text-shadow: 0.25px 0 currentColor;
 }
 
 .dark #publications .author-highlighted {
