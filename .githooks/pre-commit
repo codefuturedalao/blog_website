@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -eu
+
+repo_root=$(git rev-parse --show-toplevel)
+activity_file="static/uploads/codex-activity.json"
+
+echo "Updating Codex activity before commit..."
+node "$repo_root/scripts/generate-codex-activity.mjs" \
+  --output "$repo_root/$activity_file"
+
+git -C "$repo_root" add -- "$activity_file"
+echo "Codex activity is updated and staged."

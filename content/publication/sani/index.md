@@ -8,7 +8,7 @@ authors:
 - Chuang Hu
 - Xiaobo Zhou
 - Dazhao Cheng
-date: "2026-01-01T00:00:00Z"
+date: "2026-07-13T00:00:00Z"
 doi: ""
 
 
@@ -18,10 +18,11 @@ doi: ""
 publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *USENIX Symposium on Operating Systems Design and Implementation (OSDI)*
+publication: In *20th USENIX Symposium on Operating Systems Design and Implementation (OSDI)*
 publication_short: In *OSDI*
+ccf_rank: A
 
-abstract: Modern mobile CPUs typically adopt asymmetric multi-core architectures, where the large performance gap between big and little cores becomes a key bottleneck for on-device DNN inference. Existing inference engines fail to fully exploit all cores because naive parallelization suffers from load imbalance, while big-core-only execution wastes little-core compute capacity. We present SANI, an asymmetry-aware scalable DNN inference system for mobile CPUs. SANI combines core-aware task partitioning that matches per-core compute capability, dynamic load scheduling that rebalances work at runtime, and asymmetry-aware kernel transformation that reshapes operator implementations for heterogeneous cores. The evaluation on commercial mobile SoCs shows that SANI effectively balances core utilization, substantially reducing inference latency and energy consumption compared with state-of-the-art mobile inference engines.
+abstract: Asymmetric multiprocessing CPUs are central to mobile devices, but naive DNN scheduling across heterogeneous cores can degrade throughput because of workload imbalance. SANI combines an affinity-aware kernel issuer, an adaptive-granularity scheduler, and an on-demand kernel switcher to preserve core-kernel affinity while dynamically balancing work. Across five mobile SoCs, SANI reduces inference latency by 17.6%–23.7% on average, reaches up to 29.5% on individual models, and lowers energy consumption by up to 39% compared with state-of-the-art baselines.
 
 # Summary. An optional shortened abstract.
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
@@ -43,7 +44,7 @@ url_dataset: ''
 url_poster: ''
 url_project: ''
 url_slides: ''
-url_source: ''
+url_source: 'https://www.usenix.org/conference/osdi26/presentation/sang'
 url_video: ''
 
 # Featured image

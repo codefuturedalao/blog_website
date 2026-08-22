@@ -18,8 +18,9 @@ publication_types: ["article-journal"]
 # Publication name and optional abbreviated publication name.
 publication: In *IEEE Transactions on Mobile Computing*
 publication_short: In *IEEE TMC*
+ccf_rank: A
 
-abstract: On modern mobile devices, rendering performance and power consumption are often at odds, and the difficulty of accurately identifying rendering-related threads makes fine-grained resource optimization imprecise. To address this challenge, we propose Trident, a resource management framework that jointly performs thread identification, constraint, and multi-domain governing on mobile devices. Trident leverages cross-layer tracing to recover the rendering pipeline at the frame/batch granularity, applies reinforcement learning to constrain the critical rendering threads, and uses a gain-based control mechanism to coordinate scheduling and frequency governing across heterogeneous domains. The evaluation on commercial mobile platforms shows that Trident significantly reduces power consumption while preserving the user-perceived Quality of Experience (QoE).
+abstract: Trident addresses inaccurate rendering-thread identification, resource contention among thread groups, and disconnected CPU, GPU, and memory frequency control. It combines cross-layer thread tracing, reinforcement-learning-based multi-domain governing, and gain-guided scheduling constraints. Evaluation across five phones and multiple application categories shows that Trident preserves Quality of Experience while reducing power consumption by up to 16.8% compared with three state-of-the-art approaches.
 
 # Summary. An optional shortened abstract.
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.

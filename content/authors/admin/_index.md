@@ -1,13 +1,14 @@
 ---
-title: QianLong Sang
-role: Fourth Year CS Phd
+title: Qianlong Sang
+role: 'Fifth-Year Computer Science<br>Ph.D. Student'
 avatar_filename: avatar2.jpg
-bio: My research interests include operating system, computer architecture and
-  AIOS.
+bio: My research focuses on operating systems, mobile and edge systems, and
+  efficient on-device AI inference.
 interests:
   - Operating System
-  - Computer Architecture
-  - AIOS 
+  - Mobile and Edge Systems
+  - Systems for AI
+  - Agent for OS
 social:
   - icon: envelope
     icon_pack: fas
@@ -21,24 +22,28 @@ social:
     display:
       header: false
 organizations:
-  - name: WuHan University
+  - name: Wuhan University
     url: https://www.whu.edu.cn/
 education:
   courses:
-    - course: B.S. in Cyber Science And Engineering
-      institution: WuHan University
-      year: 2022
+    - course: Ph.D. in Computer Science and Technology
+      institution: Wuhan University
+      year: 2022–2027 (expected)
+    - course: B.E. in Cyberspace Security
+      institution: Wuhan University
+      year: 2018–2022
+prizes_talks:
+  - year: '2026'
+    title: DiDi Outstanding Ph.D. Student Academic Forum — Second Prize
+  - year: '2026'
+    title: Huawei OS Kernel Lab's Squirrel Meetup — Presentation
 email: "qlsang@whu.edu.cn"
 superuser: true
 highlight_name: true
 ---
 
-Hi! Here’s Qianlong (桑乾龙)! I am a fourth year Computer Science PhD student at WuHan University, advised Prof. [Dazhao Cheng](https://scholar.google.com/citations?hl=en&user=rRsraIwAAAAJ&view_op=list_works&sortby=pubdate#). I have a broad interest in system research, and my current work focuses on energy-aware scheduling in operating systems.
+Hi! I’m Qianlong Sang (桑乾龙), a fifth-year Computer Science Ph.D. student at Wuhan University, advised by Prof. [Dazhao Cheng](https://scholar.google.com/citations?hl=en&user=rRsraIwAAAAJ&view_op=list_works&sortby=pubdate#). My research spans operating systems, mobile and edge systems, and systems for AI. I currently focus on performance and energy optimization through scheduling, frequency scaling, critical-thread analysis, and efficient on-device AI inference.
 
 **I am graduating soon and actively looking for full-time positions and internships** in systems, operating systems, mobile/edge computing, and systems-for-AI. If you think my background fits your team, please feel free to reach out at [qlsang@whu.edu.cn](mailto:qlsang@whu.edu.cn) — I am happy to share my CV and chat.
 
-**We are also recruiting highly self-motivated students** to join our group as PhD or Master students. If you are passionate about operating systems, computer architecture, or AI systems, and enjoy building real systems, drop me an email with your CV and transcripts — I would love to talk.
-
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume2026.pdf" "newtab" >}}resumé{{< /staticref >}}.
-
-<img src="https://raw.githubusercontent.com/codefuturedalao/codefuturedalao/output/github-contribution-grid-snake.svg" alt="codefuturedalao's Github chart" />

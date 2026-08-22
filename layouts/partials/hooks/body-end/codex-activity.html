@@ -1,0 +1,2 @@
+{{ $codex_activity_js := resources.Get "js/codex-activity.js" | minify | fingerprint }}
+<script defer src="{{ $codex_activity_js.RelPermalink }}" integrity="{{ $codex_activity_js.Data.Integrity }}"></script>

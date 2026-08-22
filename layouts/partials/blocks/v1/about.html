@@ -1,0 +1,169 @@
+{{/* Hugo Blox: About — customized homepage layout */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{ $author := "" }}
+{{ if .author }}
+  {{ $author = .author }}
+{{ else }}
+  {{ $author = $block.Params.author }}
+{{ end }}
+
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find an author page at `%s`." $person_page_path }}
+{{ end }}
+{{ $person := $person_page.Params }}
+{{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
+{{ $avatar_shape := site.Params.features.avatar.shape | default "circle" }}
+
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div id="profile">
+      {{ if site.Params.features.avatar.gravatar }}
+      <img class="avatar {{if eq $avatar_shape "square"}}avatar-square{{else}}avatar-circle{{end}}" src="https://s.gravatar.com/avatar/{{ md5 $person.email }}?s=270" alt="{{$person_page.Title}}">
+      {{ else if $avatar }}
+      {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+      <img class="avatar {{if eq $avatar_shape "square"}}avatar-square{{else}}avatar-circle{{end}}"
+           width="{{ $avatar_image.Width }}" height="{{ $avatar_image.Height }}"
+           src="{{ $avatar_image.RelPermalink }}" alt="{{$person_page.Title}}">
+      {{ end }}
+
+      <div class="portrait-title">
+        <h2>
+          {{- if $person.name_pronunciation -}}
+            <ruby>
+              <rb>{{ $person_page.Title }}</rb>
+              <rt>{{ $person.name_pronunciation }}</rt>
+            </ruby>
+          {{- else -}}
+            {{- $person_page.Title -}}
+          {{- end -}}
+        </h2>
+
+        {{ with $person.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
+
+        {{ range $person.organizations }}
+        <h3>
+          {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+          <span>{{ .name }}</span>
+          {{ if .url }}</a>{{ end }}
+        </h3>
+        {{ end }}
+      </div>
+
+      <ul class="network-icon" aria-hidden="true">
+        {{ range $person.social }}
+        {{ $pack := or .icon_pack "fas" }}
+        {{ $pack_prefix := $pack }}
+        {{ if in (slice "fab" "fas" "far" "fal") $pack }}
+          {{ $pack_prefix = "fa" }}
+        {{ end }}
+        {{ $link := .link }}
+        {{ $scheme := (urls.Parse $link).Scheme }}
+        {{ $target := "" }}
+        {{ if not $scheme }}
+          {{ $link = .link | relLangURL }}
+        {{ else if in (slice "http" "https") $scheme }}
+          {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+        {{ end }}
+        <li>
+          <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .icon }}">
+            <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} big-icon"></i>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="col-12 col-lg-8">
+    {{ if and $block.Params.widget $block.Title }}<h1>{{ $block.Title | markdownify | emojify }}</h1>{{ end }}
+
+    <div class="article-style">
+      {{ $person_page.Content }}
+    </div>
+
+  </div>
+
+  <div class="col-12">
+    <div class="about-activity-grid">
+      <section class="about-activity-item codex-activity-panel" aria-label="Codex activity over the last 53 weeks">
+        <div class="about-activity-heading">
+          <h3>Codex Activity</h3>
+          <span><span data-codex-status>Last 53 weeks</span> · Updated <time data-codex-updated>—</time></span>
+        </div>
+        <div class="about-activity-visual">
+          <canvas
+            class="codex-activity-canvas"
+            data-codex-activity-canvas
+            data-source="{{ "uploads/codex-activity.json" | relURL }}"
+            role="img"
+            aria-label="Daily Codex activity over the last 53 weeks, animated as a snake eating active days."
+          ></canvas>
+        </div>
+      </section>
+
+      <section class="about-activity-item" aria-label="GitHub activity">
+        <div class="about-activity-heading">
+          <h3>GitHub Activity</h3>
+        </div>
+        <div class="about-activity-visual">
+          <img
+            class="github-activity-image"
+            src="https://raw.githubusercontent.com/codefuturedalao/codefuturedalao/output/github-contribution-grid-snake.svg"
+            alt="Qianlong Sang's GitHub activity"
+          >
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="about-details-grid">
+      {{ with $person.interests }}
+      <section class="about-detail-panel">
+        <h2 class="about-detail-heading">{{ i18n "interests" | markdownify }}</h2>
+        <ul class="ul-interests mb-0">
+          {{ range . }}
+          <li>{{ . | markdownify | emojify }}</li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+
+      {{ with $person.education }}
+      <section class="about-detail-panel">
+        <h2 class="about-detail-heading">{{ i18n "education" | markdownify }}</h2>
+        <ul class="ul-edu fa-ul mb-0">
+          {{ range .courses }}
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+              <p class="institution">{{ .institution }}</p>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+
+      {{ with $person.prizes_talks }}
+      <section class="about-detail-panel" aria-labelledby="prizes-talks-title">
+        <h2 id="prizes-talks-title" class="about-detail-heading">Prizes &amp; Talks</h2>
+        <ul class="about-prizes-list">
+          {{ range . }}
+          <li>
+            <div class="about-prizes-title">{{ .title | markdownify | emojify }}</div>
+            {{ with .year }}<span class="about-prizes-year">{{ . }}</span>{{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+    </div>
+  </div>
+</div>

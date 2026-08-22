@@ -3,6 +3,9 @@
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: pages
 
+# Keep posts on their dedicated list page rather than the homepage.
+active: false
+
 # This file represents a page section.
 headless: true
 
