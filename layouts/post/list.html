@@ -20,7 +20,38 @@
     {{ partial "functions/render_view" (dict "page" $ "item" . "view" (printf "%s-end" $.Params.view) "index" 0) }}
   {{ end }}
 
-  {{ partial "pagination" . }}
+  {{ if gt $paginator.TotalPages 1 }}
+    <nav class="post-pagination" aria-label="Posts pages">
+      <ul class="pagination justify-content-center">
+        {{ with $paginator.Prev }}
+          <li class="page-item">
+            <a class="page-link" href="{{ .URL }}" aria-label="Previous page">&laquo;</a>
+          </li>
+        {{ else }}
+          <li class="page-item disabled" aria-hidden="true">
+            <span class="page-link">&laquo;</span>
+          </li>
+        {{ end }}
+
+        {{ range $paginator.Pagers }}
+          {{ $isCurrent := eq .PageNumber $paginator.PageNumber }}
+          <li class="page-item{{ if $isCurrent }} active{{ end }}">
+            <a class="page-link" href="{{ .URL }}" aria-label="Page {{ .PageNumber }}"{{ if $isCurrent }} aria-current="page"{{ end }}>{{ .PageNumber }}</a>
+          </li>
+        {{ end }}
+
+        {{ with $paginator.Next }}
+          <li class="page-item">
+            <a class="page-link" href="{{ .URL }}" aria-label="Next page">&raquo;</a>
+          </li>
+        {{ else }}
+          <li class="page-item disabled" aria-hidden="true">
+            <span class="page-link">&raquo;</span>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }}
 </div>
 
 {{- end -}}

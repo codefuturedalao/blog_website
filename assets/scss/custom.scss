@@ -252,6 +252,67 @@ body {
   box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.18);
 }
 
+.post-pagination {
+  margin-top: 1.35rem;
+}
+
+.post-pagination .pagination {
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0;
+}
+
+.post-pagination .page-item {
+  margin: 0;
+}
+
+.post-pagination .page-link {
+  display: grid;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: 0.3rem !important;
+  background: transparent;
+  color: #344054;
+  box-shadow: none;
+}
+
+.post-pagination .page-item:not(.disabled):not(.active) .page-link:hover {
+  border-color: rgba(41, 98, 255, 0.52);
+  background: rgba(41, 98, 255, 0.06);
+  color: #1f5ed7;
+}
+
+.post-pagination .page-item.active .page-link {
+  border-color: #2962ff;
+  background: #2962ff;
+  color: #fff;
+}
+
+.post-pagination .page-item.disabled .page-link {
+  color: #98a2b3;
+  opacity: 0.62;
+}
+
+.dark .post-pagination .page-link {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #cbd5e1;
+}
+
+.dark .post-pagination .page-item:not(.disabled):not(.active) .page-link:hover {
+  border-color: rgba(154, 181, 255, 0.64);
+  background: rgba(154, 181, 255, 0.1);
+  color: #c7d7ff;
+}
+
+.dark .post-pagination .page-item.active .page-link {
+  border-color: #7b9cff;
+  background: #7b9cff;
+  color: #111827;
+}
+
 @media (max-width: 767.98px) {
   .about-activity-grid {
     grid-template-columns: 1fr;
