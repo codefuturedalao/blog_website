@@ -1,3 +1,10 @@
+---
+draft: true
+_build:
+  list: never
+  render: never
+---
+
 #  搭建一个jupyter服务器
 
 ## 环境

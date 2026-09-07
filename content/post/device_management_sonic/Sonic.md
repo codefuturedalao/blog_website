@@ -1,3 +1,10 @@
+---
+draft: true
+_build:
+  list: never
+  render: never
+---
+
 # Sonic
 
 ## 安装Mysql-Server
