@@ -1,0 +1,49 @@
+{{- define "main" -}}
+
+<main class="weekly-index" aria-labelledby="weekly-index-title">
+  <header class="weekly-index-header">
+    <span class="weekly-kicker">A WEEKLY NOTEBOOK</span>
+    <h1 id="weekly-index-title">{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="weekly-index-intro">{{ . }}</div>
+    {{ end }}
+  </header>
+
+  {{ $paginator := .Paginate .Pages.ByDate.Reverse 12 }}
+  <div class="weekly-card-grid">
+    {{ range $paginator.Pages }}
+      {{ $page := . }}
+      {{ $cover := .Resources.GetMatch "cover.*" }}
+      <article class="weekly-card">
+        <a class="weekly-card-link" href="{{ .RelPermalink }}">
+          <div class="weekly-card-cover{{ if not $cover }} weekly-card-cover-fallback{{ end }}">
+            {{ with $cover }}
+              {{ $thumbnail := .Fill "800x480 Center q86" }}
+              <img src="{{ $thumbnail.RelPermalink }}" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" alt="{{ $page.Params.cover_alt | default $page.Title }}" loading="lazy" decoding="async">
+            {{ else }}
+              <span class="weekly-card-mark">W</span>
+              <span class="weekly-card-issue">ISSUE {{ printf "%03d" (.Params.issue | default 0) }}</span>
+            {{ end }}
+          </div>
+          <div class="weekly-card-copy">
+            <div class="weekly-card-heading">
+              <h2>{{ .Title }}</h2>
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Params.interval | default (.Date.Format "Jan 2, 2006") }}</time>
+            </div>
+            {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+          </div>
+        </a>
+      </article>
+    {{ end }}
+  </div>
+
+  {{ if gt $paginator.TotalPages 1 }}
+    <nav class="weekly-pagination" aria-label="Weekly pages">
+      {{ with $paginator.Prev }}<a href="{{ .URL }}">&larr; Newer</a>{{ end }}
+      <span>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+      {{ with $paginator.Next }}<a href="{{ .URL }}">Older &rarr;</a>{{ end }}
+    </nav>
+  {{ end }}
+</main>
+
+{{- end -}}

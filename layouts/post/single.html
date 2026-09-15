@@ -1,0 +1,30 @@
+{{- define "main" -}}
+
+{{ $toc := .TableOfContents }}
+{{ $hasTOC := in $toc "<li>" }}
+
+<article class="article post-article{{ if $hasTOC }} post-article-has-toc{{ end }}">
+  {{ partial "page_header" . }}
+  <div class="article-container">
+    <div class="article-style">
+      {{ .Content }}
+    </div>
+    {{ partial "page_footer" . }}
+    {{ partial "disqus.html" . }}
+  </div>
+</article>
+
+{{ if $hasTOC }}
+  <aside class="post-hover-toc" aria-label="文章目录" tabindex="0">
+    <div class="post-hover-toc-panel">
+      <p class="post-hover-toc-title">On this page</p>
+      {{ $toc }}
+    </div>
+    <div class="post-hover-toc-handle" aria-hidden="true">
+      <span class="post-hover-toc-lines"><i></i><i></i><i></i></span>
+      <span>目录</span>
+    </div>
+  </aside>
+{{ end }}
+
+{{- end -}}

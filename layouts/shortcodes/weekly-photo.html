@@ -1,0 +1,26 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default (.Get "caption") -}}
+{{- $caption := .Get "caption" -}}
+{{- $credit := .Get "credit" -}}
+{{- $creditURL := .Get "credit_url" -}}
+{{- $variant := .Get "variant" | default "landscape" -}}
+{{- $anchor := .Get "anchor" | default "Center" -}}
+{{- $image := .Page.Resources.GetMatch $src -}}
+<figure class="weekly-photo weekly-photo-{{ $variant }}">
+  {{- with $image }}
+    {{- $spec := cond (eq $variant "wide") (printf "1200x675 %s q88" $anchor) (printf "1000x667 %s q88" $anchor) -}}
+    {{- $display := .Fill $spec -}}
+    <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- else }}
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- end }}
+  {{- if or $caption $credit }}
+    <figcaption>
+      {{- $caption -}}
+      {{- if and $caption $credit }} <span aria-hidden="true">·</span> {{ end -}}
+      {{- with $credit -}}
+        {{- if $creditURL }}<a href="{{ $creditURL }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}{{ . }}{{ end -}}
+      {{- end }}
+    </figcaption>
+  {{- end }}
+</figure>

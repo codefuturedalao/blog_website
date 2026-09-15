@@ -1,0 +1,61 @@
+{{- define "main" -}}
+{{ $page := . }}
+
+<div class="weekly-shell">
+  <aside class="weekly-sidebar" aria-label="Weekly issues">
+    <a class="weekly-sidebar-title" href="{{ "weekly/" | relLangURL }}">Weekly</a>
+    <p class="weekly-sidebar-note">Research, engineering, and small discoveries.</p>
+    <nav>
+      <ol class="weekly-sidebar-list">
+        {{ $current := .RelPermalink }}
+        {{ range (where .Site.RegularPages "Section" "weekly").ByDate.Reverse }}
+          <li>
+            <a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $current }} aria-current="page"{{ end }}>
+              <span>{{ .Title }}</span>
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Params.interval | default (.Date.Format "2006.01.02") }}</time>
+            </a>
+          </li>
+        {{ end }}
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="weekly-reading">
+    <article class="weekly-article">
+      <header class="weekly-article-header">
+        <div class="weekly-article-meta">
+          <span>ISSUE {{ printf "%03d" (.Params.issue | default 0) }}</span>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Params.interval | default (.Date.Format "January 2, 2006") }}</time>
+        </div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+      </header>
+
+      {{ $cover := .Resources.GetMatch "cover.*" }}
+      {{ with $cover }}
+        {{ $hero := .Fill "1320x702 Center q88" }}
+        <figure class="weekly-hero">
+          <img src="{{ $hero.RelPermalink }}" width="{{ $hero.Width }}" height="{{ $hero.Height }}" alt="{{ $page.Params.cover_alt | default $page.Title }}" decoding="async">
+          {{ with $page.Params.cover_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+        </figure>
+      {{ else }}
+        <div class="weekly-hero weekly-hero-fallback" aria-hidden="true">
+          <span>WEEKLY</span>
+          <strong>{{ printf "%02d" (.Params.issue | default 0) }}</strong>
+          <small>RESEARCH · SYSTEMS · NOTES</small>
+        </div>
+      {{ end }}
+
+      <div class="weekly-article-body">
+        {{ .Content }}
+      </div>
+
+      <footer class="weekly-article-footer">
+        <a href="{{ "weekly/" | relLangURL }}">&larr; All Weekly issues</a>
+        <span>Qianlong Sang</span>
+      </footer>
+    </article>
+  </main>
+</div>
+
+{{- end -}}
