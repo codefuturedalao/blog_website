@@ -54,6 +54,10 @@
         <a href="{{ "weekly/" | relLangURL }}">&larr; All Weekly issues</a>
         <span>Qianlong Sang</span>
       </footer>
+
+      <div class="weekly-comments">
+        {{ partial "disqus.html" . }}
+      </div>
     </article>
   </main>
 </div>
