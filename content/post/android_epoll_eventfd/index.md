@@ -22,7 +22,7 @@ categories:
   - Linux
   - Epoll
   - EventFd
-projects: [RenderT]
+projects: []
 image:
   caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/vOTBmRh3-7I)"
   focal_point: ""

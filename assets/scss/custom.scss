@@ -509,14 +509,14 @@ body {
   font-weight: 700;
 }
 
-#publications .author-highlighted {
+.pub-list-item .author-highlighted {
   color: #111827;
   font-style: normal;
   font-weight: 700;
   font-size: 1.025em;
 }
 
-.dark #publications .author-highlighted {
+.dark .pub-list-item .author-highlighted {
   color: #ffffff;
 }
 

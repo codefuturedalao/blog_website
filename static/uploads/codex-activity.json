@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-07T12:53:15.422Z",
+  "generatedAt": "2026-09-15T08:25:45.197Z",
   "timezone": "Asia/Shanghai",
   "range": {
-    "start": "2025-09-02",
-    "end": "2026-09-07",
+    "start": "2025-09-10",
+    "end": "2026-09-15",
     "days": 371
   },
   "summary": {
-    "activeDays": 70,
-    "currentStreak": 3,
+    "activeDays": 75,
+    "currentStreak": 2,
     "longestStreak": 16,
-    "totalSessions": 129,
-    "totalTokens": 1294921717,
-    "peakDailyTokens": 208123025
+    "totalSessions": 136,
+    "totalTokens": 1321671922,
+    "peakDailyTokens": 191864924
   },
   "days": [
     {
@@ -127,7 +127,7 @@
     },
     {
       "date": "2026-06-24",
-      "tokens": 13835091,
+      "tokens": 13015491,
       "sessions": 3
     },
     {
@@ -137,7 +137,7 @@
     },
     {
       "date": "2026-06-27",
-      "tokens": 191867,
+      "tokens": 1011467,
       "sessions": 1
     },
     {
@@ -222,13 +222,13 @@
     },
     {
       "date": "2026-07-24",
-      "tokens": 25912780,
+      "tokens": 48082948,
       "sessions": 7
     },
     {
       "date": "2026-07-25",
-      "tokens": 208123025,
-      "sessions": 5
+      "tokens": 185952857,
+      "sessions": 4
     },
     {
       "date": "2026-07-26",
@@ -362,8 +362,33 @@
     },
     {
       "date": "2026-09-07",
-      "tokens": 3825287,
+      "tokens": 5010011,
       "sessions": 4
+    },
+    {
+      "date": "2026-09-08",
+      "tokens": 10206706,
+      "sessions": 3
+    },
+    {
+      "date": "2026-09-09",
+      "tokens": 1718239,
+      "sessions": 2
+    },
+    {
+      "date": "2026-09-10",
+      "tokens": 13090072,
+      "sessions": 4
+    },
+    {
+      "date": "2026-09-14",
+      "tokens": 308538,
+      "sessions": 1
+    },
+    {
+      "date": "2026-09-15",
+      "tokens": 241926,
+      "sessions": 1
     }
   ]
 }

@@ -1,6 +1,10 @@
 ---
 title: Slides
 summary: An introduction to using Wowchemy's Slides feature.
+draft: true
+_build:
+  list: never
+  render: never
 authors: []
 tags: []
 categories: []

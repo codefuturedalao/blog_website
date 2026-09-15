@@ -16,7 +16,7 @@ categories:
   - Network
 projects: []
 image:
-  caption: "Image credit: [**Unsplash**](./v2ray.jpg)"
+  caption: ""
   focal_point: ""
   placement: 2
   preview_only: false

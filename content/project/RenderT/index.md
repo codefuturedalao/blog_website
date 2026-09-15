@@ -7,6 +7,10 @@ date: 2024-08-27T00:00:00Z
 external_link: ""
 url_slides: ""
 title: Identifying Critical Threads in Mobile Devices
+draft: true
+_build:
+  list: never
+  render: never
 tags:
   - Operating System
 links: []

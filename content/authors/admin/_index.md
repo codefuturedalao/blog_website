@@ -18,7 +18,7 @@ social:
     link: https://github.com/codefuturedalao
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/
+    link: https://www.linkedin.com/in/sang-qianlong-72a07026b/
     display:
       header: false
 organizations:

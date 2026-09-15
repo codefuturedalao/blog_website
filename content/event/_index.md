@@ -1,6 +1,10 @@
 ---
 title: Recent & Upcoming Talks
 cms_exclude: true
+draft: true
+_build:
+  list: never
+  render: never
 
 # View.
 #   1 = List

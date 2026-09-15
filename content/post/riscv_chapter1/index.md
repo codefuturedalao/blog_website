@@ -16,7 +16,7 @@ categories:
   - RISC-V
 projects: []
 image:
-  caption: "Image credit: [**Unsplash**](./v2ray.jpg)"
+  caption: ""
   focal_point: ""
   placement: 2
   preview_only: false
@@ -112,4 +112,3 @@ RISC-V默认的内存一致性模型是Weak Memory Ordering（RVWMO），定义�
 2. requested trap：请求environment代表软件做某些事情，如system call。在这种情况，有可能不会返回到harts中执行，比如system call导致environment终结或者删除该harts。
 3. invisible trap：EE handle完之后转移会harts执行，软件并不知情。例子有emulate missing instructions，在demand-paged环境中处理缺页。
 4. fatal trap：代表fatal failure，导致EE终止。例子包括虚拟内存页保护机制出现问题。每一个EEI需要定义execution如何终止且被报告给外部环境。
-
