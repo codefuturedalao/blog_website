@@ -1,5 +1,5 @@
 ---
-title: "Weekly #1 · 回武汉吃饭"
+title: "Weekly #1 · 武汉食记"
 date: 2026-09-13T23:59:00+08:00
 lastmod: 2026-09-13T23:59:00+08:00
 summary: "回武汉的一周：四顿惦记很久的饭，以及一个统一管理 AI coding sessions 的工具 Relai。"

@@ -1,5 +1,5 @@
 ---
-title: "Weekly #0 · 本期标题"
+title: "Weekly #0 · 四字主题"
 date: {{ .Date }}
 lastmod: {{ .Date }}
 summary: "用一句话概括这一周的主要内容。"
@@ -26,6 +26,7 @@ Weekly 模板约定：
 6. interval 始终填写该期覆盖的周一至周日，例如 2026.09.07–09.13。
 7. 如果封面图片还要出现在正文，请保留一份语义清晰的文件名并在正文引用。
 8. 来自外部网站的图片必须填写 credit 和 credit_url。
+9. 标题统一使用 `Weekly #<issue> · <四字主题>`，四字主题必须正好四个汉字，并与封面图片直接相关。
 
 创建方式：hugo new --kind weekly weekly/<issue>/index.md
 完成内容和图片后，将 draft 改为 false。
