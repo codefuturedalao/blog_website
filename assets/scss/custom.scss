@@ -3,7 +3,7 @@
 
 $padding-16: 1rem !default;
 $body-min-width: 20rem !default;
-$lxgw-screen-font: "LXGW WenKai Screen", "Klee One", cursive;
+$lxgw-screen-font: "LXGW WenKai Screen", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
 $home-font: "Lato", "Helvetica Neue", Arial, sans-serif;
 
 $hint-colors: (
@@ -489,8 +489,8 @@ body {
 
 .weekly-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.4rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .weekly-card {
@@ -573,20 +573,17 @@ body {
 }
 
 .weekly-card-copy {
-  padding: 1rem 1.05rem 1.1rem;
+  padding: 0.82rem 0.88rem 0.92rem;
 }
 
 .weekly-card-heading {
-  display: flex;
-  gap: 0.75rem;
-  align-items: baseline;
-  justify-content: space-between;
+  display: block;
 }
 
 .weekly-card-heading h2 {
   overflow: hidden;
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 0.96rem;
   font-weight: 700;
   line-height: 1.3;
   text-overflow: ellipsis;
@@ -594,17 +591,18 @@ body {
 }
 
 .weekly-card-heading time {
-  flex: none;
+  display: block;
+  margin-top: 0.12rem;
   color: #667085;
-  font-size: 0.72rem;
+  font-size: 0.66rem;
 }
 
 .weekly-card-copy p {
   display: -webkit-box;
   overflow: hidden;
-  margin: 0.55rem 0 0;
+  margin: 0.42rem 0 0;
   color: #667085;
-  font-size: 0.86rem;
+  font-size: 0.8rem;
   line-height: 1.5;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;

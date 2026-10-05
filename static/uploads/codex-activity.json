@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T10:25:01.764Z",
+  "generatedAt": "2026-10-05T15:08:36.487Z",
   "timezone": "Asia/Shanghai",
   "range": {
     "start": "2025-09-30",
@@ -10,8 +10,8 @@
     "activeDays": 93,
     "currentStreak": 17,
     "longestStreak": 17,
-    "totalSessions": 222,
-    "totalTokens": 2199738049,
+    "totalSessions": 224,
+    "totalTokens": 2204023259,
     "peakDailyTokens": 191864924
   },
   "days": [
@@ -477,8 +477,8 @@
     },
     {
       "date": "2026-10-05",
-      "tokens": 26410519,
-      "sessions": 10
+      "tokens": 30695729,
+      "sessions": 13
     }
   ]
 }
