@@ -27,7 +27,8 @@ design:
     <h2 id="news-setbacks-title" class="news-card-title">Setbacks &amp; Lessons</h2>
     <p class="news-card-intro">Rejection is part of research. I keep this record as a reminder that progress is rarely linear—and that every setback can become the next starting point.</p>
     <ul>
-      <li><time datetime="2026">2026</time><span><strong>SOSP '26</strong><span class="news-status">Rejected</span></span></li>
+      <li><time datetime="2026">2026</time><span><strong>ASPLOS Sep '26</strong><span class="news-status">Rejected</span></span></li>
+      <li><span class="news-year-spacer" aria-hidden="true"></span><span><strong>SOSP '26</strong><span class="news-status">Rejected</span></span></li>
       <li><span class="news-year-spacer" aria-hidden="true"></span><span><strong>ASPLOS '26</strong><span class="news-status">Rejected</span></span></li>
       <li class="news-year-start"><time datetime="2025">2025</time><span><strong>MobiCom '25</strong><span class="news-status">Rejected</span></span></li>
       <li><span class="news-year-spacer" aria-hidden="true"></span><span><strong>WWW '25</strong><span class="news-status">Rejected</span></span></li>

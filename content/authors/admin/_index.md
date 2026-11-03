@@ -34,6 +34,10 @@ education:
       year: 2018–2022
 prizes_talks:
   - year: '2026'
+    title: National Scholarship
+  - year: '2026'
+    title: Outstanding Student (Pacesetter)
+  - year: '2026'
     title: DiDi Outstanding Ph.D. Student Academic Forum — Second Prize
   - year: '2026'
     title: Huawei OS Kernel Lab's Squirrel Meetup — Presentation

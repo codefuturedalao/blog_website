@@ -27,7 +27,7 @@ experience:
     company_url: 'https://www.tencent.com/'
     location: Shenzhen
     date_start: '2026-06-01'
-    date_end: ''
+    date_end: '2026-11-30'
 
   - title: Project Collaborator / Research Intern
     company: Huawei

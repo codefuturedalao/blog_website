@@ -7,7 +7,7 @@ draft: false
 featured: false
 authors:
   - admin
-lastmod: 2026-09-09T00:00:00+08:00
+lastmod: 2026-11-02T00:00:00+08:00
 tags:
   - Failure
   - Rejection
@@ -24,7 +24,7 @@ image:
 
 ---
 
-Inspired by [List of Rejections](https://zhyfeng.github.io/posts/blog-post-1/), this page records the research rejections I have received through September 9, 2026. Rejection is part of research: every review offers feedback, perspective, and a starting point for the next iteration.
+Inspired by [List of Rejections](https://zhyfeng.github.io/posts/blog-post-1/), this page records the research rejections I have received through November 2026. Rejection is part of research: every review offers feedback, perspective, and a starting point for the next iteration.
 
 ## 2023
 
@@ -73,3 +73,8 @@ Of 840 submissions, 89 papers were accepted and 42 were invited for revision.
 | 3 | 3 | 2 | 2 | 3 |
 | 4 | 2 | 2 | 2 | 2 |
 | 5 | 2 | 1 | 2 | 1 |
+
+### ASPLOS September 2026
+
+**Decision:** Rejected<br>
+**Overall strength (OveStrASPLOS):** 2 / 4 / 2
