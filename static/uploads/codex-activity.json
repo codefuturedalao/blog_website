@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-03T02:18:40.946Z",
+  "generatedAt": "2026-11-04T02:57:29.442Z",
   "timezone": "Asia/Shanghai",
   "range": {
-    "start": "2025-10-29",
-    "end": "2026-11-03",
+    "start": "2025-10-30",
+    "end": "2026-11-04",
     "days": 371
   },
   "summary": {
-    "activeDays": 39,
-    "currentStreak": 3,
+    "activeDays": 40,
+    "currentStreak": 4,
     "longestStreak": 8,
-    "totalSessions": 64,
-    "totalTokens": 947960881,
+    "totalSessions": 75,
+    "totalTokens": 1085320248,
     "peakDailyTokens": 209633555
   },
   "days": [
@@ -117,8 +117,8 @@
     },
     {
       "date": "2026-10-12",
-      "tokens": 858952,
-      "sessions": 2
+      "tokens": 1598760,
+      "sessions": 3
     },
     {
       "date": "2026-10-13",
@@ -207,8 +207,13 @@
     },
     {
       "date": "2026-11-03",
-      "tokens": 2653890,
-      "sessions": 4
+      "tokens": 132548933,
+      "sessions": 13
+    },
+    {
+      "date": "2026-11-04",
+      "tokens": 6724516,
+      "sessions": 5
     }
   ]
 }
